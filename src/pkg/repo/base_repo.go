@@ -7,6 +7,8 @@ import (
 	"runtime/debug"
 	"time"
 
+	"github.com/bactruongvan17/taskhub-userservice/src/pkg/model"
+	"github.com/google/uuid"
 	"gorm.io/gorm"
 )
 
@@ -33,6 +35,11 @@ type PGInterface interface {
 	DBWithTimeout(ctx context.Context) (*gorm.DB, context.CancelFunc)
 	DB() (db *gorm.DB)
 	Transaction(ctx context.Context, f func(rp PGInterface) error) error
+
+	// user.repo
+	CreateUser(ctx context.Context, model *model.User, tx *gorm.DB) error
+	GetUserByEmail(ctx context.Context, email string, tx *gorm.DB) (rs *model.User, err error)
+	GetUserById(ctx context.Context, userId uuid.UUID, tx *gorm.DB) (rs *model.User, err error)
 }
 
 func (r *RepoPG) Transaction(ctx context.Context, f func(rp PGInterface) error) (err error) {

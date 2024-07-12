@@ -1,7 +1,7 @@
 package handlers
 
 import (
-	"github.com/bactruongvan17/taskhub-userservice/src/model"
+	"github.com/bactruongvan17/taskhub-userservice/src/pkg/model"
 	"github.com/gin-gonic/gin"
 	"gorm.io/gorm"
 )

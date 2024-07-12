@@ -5,7 +5,7 @@ import (
 	"os"
 
 	"github.com/bactruongvan17/taskhub-userservice/src/conf"
-	"github.com/bactruongvan17/taskhub-userservice/src/route"
+	"github.com/bactruongvan17/taskhub-userservice/src/pkg/route"
 )
 
 func main() {

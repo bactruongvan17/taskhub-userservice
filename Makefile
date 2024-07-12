@@ -1,6 +1,6 @@
 PROTO_REPO := https://github.com/bactruongvan17/taskhub-backend-protobuf
 TEMP_DIR := proto_temp
-SRC_PROTO_DIR := src/proto
+SRC_PROTO_DIR := src/pkg/proto
 PROTO_FILES := $(wildcard $(SRC_PROTO_DIR)/*.proto)
 
 proto_clone:
